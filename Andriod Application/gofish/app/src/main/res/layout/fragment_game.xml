@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBackground2"
+    tools:context=".GameFragment">
+
+    <TextView
+        android:id="@+id/messageBubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:width="300dp"
+        android:height="70dp"
+        android:text="Message Text"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/playerHand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/backButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Imagine (John Avatar), Mason Gourlay, accessed on (3 November 2023) <https://www.imagine.art/dashboard/tool/from-text> -->
+    <ImageButton
+        android:id="@+id/johnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-30dp"
+        android:layout_weight="1"
+        android:contentDescription="JohnAvatar"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/johnavatar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardDeckButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+    <!-- Imagine (Player Avatar), Mason Gourlay, accessed on (3 November 2023) <https://www.imagine.art/dashboard/tool/from-text> -->
+    <ImageButton
+        android:id="@+id/playerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:contentDescription="playerAvatar"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/playeravatar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Imagine (Anne Avatar), Mason Gourlay, accessed on (3 November 2023) <https://www.imagine.art/dashboard/tool/from-text> -->
+    <ImageButton
+        android:id="@+id/anneButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_weight="1"
+        android:contentDescription="AnneAvatar"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/anneavatar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/billButton"
+        app:layout_constraintStart_toEndOf="@+id/johnButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Imagine (Bill Avatar), Mason Gourlay, accessed on (3 November 2023) <https://www.imagine.art/dashboard/tool/from-text> -->
+    <ImageButton
+        android:id="@+id/billButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-30dp"
+        android:layout_weight="1"
+        android:contentDescription="BillAvatar"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        android:src="@drawable/billavatar"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cardDeckButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+    <LinearLayout
+        android:id="@+id/playerHand"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="-35dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:rotation="0"
+        app:layout_constraintBottom_toTopOf="@+id/playerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/playerTricks"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="-20dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/playerButton"
+        app:layout_constraintEnd_toStartOf="@+id/playerButton"
+        app:layout_constraintTop_toTopOf="@+id/playerButton" />
+
+
+    <LinearLayout
+        android:id="@+id/anneHand"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginEnd="-40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anneButton" />
+
+    <LinearLayout
+        android:id="@+id/anneTricks"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="-20dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/anneButton"
+        app:layout_constraintStart_toEndOf="@+id/anneButton"
+        app:layout_constraintTop_toTopOf="@+id/anneButton" />
+
+    <LinearLayout
+        android:id="@+id/johnHand"
+        android:layout_width="50dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginBottom="-40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/johnButton"
+        app:layout_constraintStart_toEndOf="@+id/johnButton"
+        app:layout_constraintTop_toTopOf="@+id/johnButton">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/johnTricks"
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/johnButton"
+        app:layout_constraintEnd_toEndOf="@+id/johnButton"
+        app:layout_constraintStart_toStartOf="@+id/johnButton">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/billHand"
+        android:layout_width="50dp"
+        android:layout_height="197dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginBottom="-40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/billButton"
+        app:layout_constraintEnd_toStartOf="@+id/billButton"
+        app:layout_constraintTop_toTopOf="@+id/billButton" />
+
+    <LinearLayout
+        android:id="@+id/billTricks"
+        android:layout_width="30dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="-20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/billButton"
+        app:layout_constraintStart_toStartOf="@+id/billButton"
+        app:layout_constraintTop_toBottomOf="@+id/billButton" />
+
+    <!-- Go Fish Button (n.d.) [digital art], Card Games, accessed 7 November 2023. https://cardgames.io/gofish/ -->
+    <ImageButton
+        android:id="@+id/goFishButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="GoFishButton"
+        android:scaleX=".7"
+        android:scaleY=".7"
+        android:src="@drawable/gofish"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/playerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerButton"
+        app:layout_constraintTop_toTopOf="@+id/playerButton" />
+
+    <TextView
+        android:id="@+id/billNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
+        android:text="@string/billName"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/billButton"
+        app:layout_constraintEnd_toEndOf="@+id/billButton"
+        app:layout_constraintStart_toStartOf="@+id/billButton" />
+
+    <TextView
+        android:id="@+id/johnNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
+        android:text="@string/johnName"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/johnButton"
+        app:layout_constraintEnd_toEndOf="@+id/johnButton"
+        app:layout_constraintStart_toStartOf="@+id/johnButton" />
+
+    <TextView
+        android:id="@+id/playerNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
+        android:text="Players Name"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/playerButton"
+        app:layout_constraintEnd_toEndOf="@+id/playerButton"
+        app:layout_constraintStart_toStartOf="@+id/playerButton" />
+
+    <TextView
+        android:id="@+id/anneNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-30dp"
+        android:text="@string/anneName"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/anneButton"
+        app:layout_constraintEnd_toEndOf="@+id/anneButton"
+        app:layout_constraintStart_toStartOf="@+id/anneButton" />
+
+    <ImageButton
+        android:id="@+id/cardDeckButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="DeckButton"
+        android:scaleX=".6"
+        android:scaleY=".6"
+        android:src="@drawable/back"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/messageBubble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anneHand" />
+
+    <!-- Layout to choose how many players the user wants to verse -->
+    <LinearLayout
+        android:id="@+id/numOfEnemysChoices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/oneEnemy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/twoEnemy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/threeEnemy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+    </LinearLayout>
+
+    <!-- Layout to choose the card the player wants to ask for -->
+    <LinearLayout
+        android:id="@+id/chooseCardWanted"
+        android:layout_width="370dp"
+        android:layout_height="150dp"
+        android:background="#03A9F4"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/chooseCardPrompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="What card do you wanna ask &quot;&quot; For?"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/closeChooseCard"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/closeChooseCard"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- The first of the 2 card wanted layouts, used to display 6 card choices -->
+        <LinearLayout
+            android:id="@+id/chooseCardWantedLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/choose2"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose3"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose4"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="4"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose5"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose6"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="6"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose7"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- The second of the 2 card wanted layouts, used to display any extra cards overflowing from the first card wanted layout -->
+        <LinearLayout
+            android:id="@+id/chooseCardWantedLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/choose8"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose9"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/choose10"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="10"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/chooseJ"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="J"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/chooseQ"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="Q"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/chooseK"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="K"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/chooseA"
+                android:layout_width="61dp"
+                android:layout_height="match_parent"
+                android:text="A"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/giveCardsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:text="@string/giveCardsButton"
+        app:layout_constraintEnd_toEndOf="@+id/goFishButton"
+        app:layout_constraintStart_toStartOf="@+id/goFishButton"
+        app:layout_constraintTop_toBottomOf="@+id/goFishButton" />
+
+    <LinearLayout
+        android:id="@+id/trickDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="78dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/cardDeckButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardDeckButton"></LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

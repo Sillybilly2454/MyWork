@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainMenuFragment">
+
+    <fragment
+        android:id="@+id/MainMenuFragment"
+        android:name="com.cardgamesrus.gofish.MainMenuFragment"
+        tools:layout="@layout/fragment_mainmenu">
+        <action
+            android:id="@+id/action_MainMenuFragment_to_WinsFragment"
+            app:destination="@id/WinsFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_GameFragment"
+            app:destination="@id/GameFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_ChangeNameFragment"
+            app:destination="@id/ChangeNameFragment" />
+        <action
+            android:id="@+id/action_MainMenuFragment_to_InstructionsFragment"
+            app:destination="@id/InstructionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/WinsFragment"
+        android:name="com.cardgamesrus.gofish.WinsFragment"
+        tools:layout="@layout/fragment_wins">
+
+        <action
+            android:id="@+id/action_WinsFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/InstructionsFragment"
+        android:name="com.cardgamesrus.gofish.InstructionsFragment">
+
+        <action
+            android:id="@+id/action_InstructionsFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.cardgamesrus.gofish.GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_GameFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChangeNameFragment"
+        android:name="com.cardgamesrus.gofish.ChangeNameFragment">
+        <action
+            android:id="@+id/action_ChangeNameFragment_to_MainMenuFragment"
+            app:destination="@id/MainMenuFragment" />
+    </fragment>
+</navigation>

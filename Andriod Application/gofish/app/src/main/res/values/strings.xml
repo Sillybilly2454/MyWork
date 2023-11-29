@@ -1,0 +1,45 @@
+<resources>
+    <string name="appName">Go Fish</string>
+    <string name="winTitle">Wins</string>
+    <string name="playButton">Play</string>
+    <string name="instructions">Instructions</string>
+    <string name="winButton">Wins</string>
+    <string name="resetDataButton">Reset Data</string>
+    <string name="backButton">Back</string>
+    <string name="playerWinsText">Player Wins:</string>
+    <string name="johnWinsText">John(bot) Wins:</string>
+    <string name="anneWinsText">Anne(bot) Wins:</string>
+    <string name="billWinsText">Bill(bot) Wins:</string>
+    <string name="changeButtonText">Change</string>
+    <string name="changeNameTitle">Change Name</string>
+    <string name="changeNameButton">Change Name</string>
+    <string name="waterMark">Game By Card-Games-R-Us</string>
+    <string name="goFishButton">Go Fish</string>
+    <string name="johnName">John</string>
+    <string name="anneName">Anne</string>
+    <string name="billName">Bill</string>
+    <string name="giveCardsButton">Give Cards</string>
+    <string name="soundInput">Music?</string>
+
+    <!-- GO FISH (n.d.), CardGames, accessed 5 September 2023. https://cardgames.io/gofish/ -->
+    <!-- Go Fish on PlayingCards.io (n.d.), PlayingCards, accessed 23 September 2023. https://playingcards.io/game/go-fish -->
+    <string name="rules">Rules:\n
+        • The game uses the standard 52-card deck\n\n
+        • If there are 2 players, both get dealt 7 cards. If there are more than 3, all players get 5 cards.\n\n
+        • The deck of cards goes in the middle of all the players.\n\n
+        • The turns go clockwise.\n\n
+        • On a player\'s turn, they can ask any player if they have a card rank.\n\n
+        • A player can only ask another player for a card they have.\n\n
+        • If the player that\'s being asked has any cards of the rank, then they have to give all of them to the player who asked. If they don\'t have any of that rank, then they have to say \'Go Fish,\' and the player who asked has to pick up 1 card from the deck.\n\n
+        • If the player gets the card they ask for, they get another turn, and also get another turn if they draw the card they asked for from the \'Go Fish.\'\n\n
+        • As soon as a player gets 4 of a kind, they have to lay them down for all players to see, and then put them in a pile beside the player.\n\n
+        • If a player runs out of cards, they draw another 5, if there aren\'t enough cards in the deck to draw 5, then they draw however many are left.\n\n
+        • If someone tells you to Go Fish but there aren\'t any cards, just continue on to the next player\'s turn.\n\n
+        • Once there are no more cards in the deck or player\'s hands, the game is over and you start scoring.\n\n
+        • The winner of the game is the person who has the most tricks (four of a kind)
+    </string>
+
+    <string name="rulesButton">Rules</string>
+    <string name="infoButton">Info</string>
+
+</resources>
