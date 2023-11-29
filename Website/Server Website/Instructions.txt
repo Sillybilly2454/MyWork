@@ -1,0 +1,1 @@
+To reset the data base delete the data.sqlite and all images in the public/images/

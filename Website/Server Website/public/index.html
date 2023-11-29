@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Account</title>
+   <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+   <header>
+      <h1>Wishlist</h1>
+
+      <h3>Logged in as: <span class="accountUsername">Username!</span></h3>
+     
+      <!-- A container for a dropdown menu related to the user's account. -->
+      <div id="hover-container">
+         <span>Account</span>
+         <div id="menu">
+           <ul>
+               <h2>Account Deletion</h2>
+               <input type="password" id="password" placeholder="Enter Password">
+               <button id="deleteAccountButton">Delete Account</button>
+               
+               <h2>Logout</h2>
+               <button href="index.html" id="logoutButton">Logout</button>
+
+               <h2><a href="policiespage.html">Policies</a></h2>
+            </ul>
+         </div>
+      </div>
+
+      <div id="wishlistsButtons">
+         <button id="myWishListsButton">My Wishlists</button>
+         <button id="sharedWishListsButton">Shared Wishlists</button>
+      </div>
+   </header>
+
+
+
+   <div id="allWishListsDiv">
+      <div id="wishListStuffContainer">
+         <div id="wishListsDiv">
+            <button id="newWishListButton">Create New Wishlist</button>
+            <!-- List of wishlists that they either own or are shared in will be put in here -->
+         </div>
+         <div id="currentWishListDiv">
+            <div>
+               <h1 id="currentWishListName">WishList Name</h1>
+               <button id="shareWishListButton">Share WishList</button>
+               <button id="changeCurrentWishListNameButton">Change Name</button>
+            </div>
+
+            <div id="currentWishListItemsDiv">
+               <!-- Items in wishlist will be put in here -->
+
+            </div>
+            <button id="addItemToCurrentWishListButton">Add Item To WishList</button>
+            <button id="deleteCurrentWishListButton">Delete WishList</button>
+         </div>
+      </div>
+   </div>
+   
+   <!-- Popup to share or unshare people from the current open wishlist -->
+   <div id="sharePopup" class="popup">
+      <div class="popup-content">
+            <span class="close" id="closeSharePopup">&times;</span>
+            <h2>Share with a Username</h2>
+            <input type="text" id="username" placeholder="Enter username">
+            <p id="shareError">Error Message</p>
+            <button id="shareSubmit">Share</button>
+
+            <div id="popupSharedWith">
+               <h2 id="sharedWithTitle">Shared With:</h2>
+               
+               <!-- People shared with in wishlist will be put in here -->
+            </div>
+      </div>
+   </div>
+
+   <!-- Popup to change the name of the current open wishlist -->
+   <div id="changeWishlistNamePopup" class="popup">
+      <div class="popup-content">
+            <span class="close" id="closeChangeWishlistNamePopup">&times;</span>
+            <h2>Change Wishlist Name</h2>
+            <input type="text" id="wishListNameInput" placeholder="Enter Wishlist Name" maxlength="35">
+            <br>
+            <br>
+            <button id="changeWishlistNameSubmit">Change Name</button>
+      </div>
+   </div>
+
+   <!-- Popup to add an item to to the current open wishlist -->
+   <div id="addItemPopup" class="popup">
+      <div class="popup-content">
+         <span class="close" id="closeAddItemPopup">&times;</span>
+         <h2 id="itemPopupTitle">Add Item</h2>
+
+         <h3>Name:*</h3>
+         <input type="text" placeholder="Enter Product Name" id="nameInput">
+
+         <h3>Link:</h3>
+         <input type="url" placeholder="Enter a URL" id="urlInput">
+
+         <h3>Image:</h3>
+         <img id="oldItemImage">
+         <input type="file" accept="image/*" id="imageInput">
+         <br>
+
+         <h3>Price:*</h3>
+         <label>AUD $</label> <input type="number" placeholder="Enter the products price" min="1" max="10000" id="priceInput">
+
+         <br>
+
+         <input type="submit" value="Create Item" id="addItemButton">
+         <input type="submit" value="Update Item" id="updateItemButton">
+      </div>
+   </div>
+</body>
+
+<script src="socket.io.js"></script>
+<script src="client.js"></script>
+
+<script>
+   // Add an event listener to the price input field to manage the value
+   priceInput.addEventListener('input', function () {
+      // Gets all the values for the mix, max, and current value
+       const min = parseFloat(this.min); 
+       const max = parseFloat(this.max);
+       var value = parseFloat(this.value);
+
+       // Check if the entered value is less than the minimum
+       if (value < min) {
+         value = min;
+       }
+
+       // Check if the entered value is greater than the maximum
+       if (value > max) {
+         value = max;
+       }
+
+       // Gets rid of any extra characters like (+,-)
+       this.value = value;
+   });
+</script>
+
+</html>

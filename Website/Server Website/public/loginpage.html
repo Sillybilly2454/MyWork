@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+   <header>
+      <h1>Wishlist Maker</h1>
+
+      <!-- A container for a dropdown menu related to the user's account. -->
+      <nav>
+         <ul>
+            <li id="current-page">
+               <a href="loginpage.html">Login</a>
+            </li>
+            <li>
+               <a href="registerpage.html">Register</a>
+            </li>
+            <li>
+               <a href="policiespage.html">Policies</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+
+   <div class="loginRegisterDiv">
+      <h1>Login</h1>
+      <p>Don't have an account? <a href="registerpage.html">Register</a></p>
+
+      <input type="text" id="username" placeholder="Username">
+      <br>
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="TogglePassword()">Show</button>
+      <br>
+
+      <br>
+      <button id="loginButton">Login</button>
+   </div>
+</body>
+
+
+<script src="socket.io.js"></script>
+<script src="client.js"></script>
+
+<script>
+/**
+    * Function to toggle the password input field between "password" and "text" types to show/hide the password
+    */
+    function TogglePassword() {
+      if (passwordInput.type == "password") {
+         passwordInput.type = "text"; // Show the password
+      } else {
+         passwordInput.type = "password"; // Hide the password
+      }
+   }
+</script>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - SoccerFusion Team</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+   <header id="small-header">
+      <!-- Logo Maker (n.d.), Adobe Express, accessed 7 September 2023. https://express.adobe.com/express-apps/logo-maker/ -->
+      <img src="images/website-logo-white.png" alt="Website Logo">
+
+      <nav id="nav-links">
+         <!-- X mark Computer Icons Check mark, x mark, angle, logo png (n.d.) [photograph], PNG EGG, accessed 4 September 2023. https://www.pngegg.com/en/png-mrezk -->
+         <button id="exit-selections" onclick="hideMenu()"><img src="images/x.png"></button>
+         
+         <ul>
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+            <li>
+               <a href="informationpage.html">Information</a>
+            </li>
+            <li>
+               <a href="eventspage.html">Events</a>
+            </li>
+            <li>
+               <a href="contactpage.html">Contact</a>
+            </li>
+            <li>
+               <a href="gallerypage.html">Gallery</a>
+            </li>
+            <li id="current-page">
+               <a href="shoppage.html">Shop</a>
+            </li>
+         </ul>
+      </nav>  
+
+      <!-- Menu Three Horizontal Lines Symbol Free Icon - Logos With Horizontal Lines (n.d.) [photograph], ClipArtMax, accessed 6 September 2023. https://www.clipartmax.com/middle/m2H7G6N4m2d3b1A0_menu-three-horizontal-lines-symbol-free-icon-logos-with-horizontal-lines/ -->
+      <button id="show-nav-button" onclick="showMenu()"><img src="images/show-nav-button.png"></button>
+
+      <!-- Shopping cart Icon, Shopping cart, black, design png (n.d.) [photograph], PNG EGG, accessed 6 September 2023. https://www.pngegg.com/en/png-bwggt -->
+      <button id="shoppingcart-button"><img src="images/shopping-cart.png"></button>
+   </header>
+
+   <section>
+      <h1>All Products</h1>
+
+      <div id="search-container">
+         <input type="text" id="searchBar" placeholder="Search for items...">
+
+         <!-- Computer Icons, filter, angle, rectangle png (n.d.) [photograph], PNG EGG, accessed 8 September 2023. https://www.pngegg.com/en/png-zhnbd -->
+         <button id="filters-button"><img src="images/filters-logo.png"></button>
+      </div>
+
+      <div id="filter-Controls">
+         <h2>Filters</h2>
+
+         <div class="filterwrapper">
+            <!-- Coding Artist (7 June 2021) Double Range Slider | HTML, CSS, Javascript | With Source Code [video], Coding Artist, YouTube, accessed 6 September 2023. https://www.youtube.com/watch?v=DfSYmk_6vk8 -->
+            <div class="wrapper">
+               <div class="values">
+                  <span id="range1">
+                     0
+                  </span>
+                  <span> &dash; </span>
+                  <span id="range2">
+                     100
+                  </span>
+               </div>
+               <div class="container">
+                  <div class="slider-track"></div>
+                  <input type="range" min="0" max="150" value="0" id="slider-1" oninput="slideOne()">
+                  <input type="range" min="0" max="150" value="150" id="slider-2" oninput="slideTwo()">
+               </div>
+            </div>
+         </div>
+
+         <label for="selectFilterClothingType">Clothing Type:</label>
+         <select id="selectFilterClothingType">
+            <option value="-">All</option>
+            <option value="hat">Hat</option>
+            <option value="shirt">Shirt</option>
+            <option value="shorts">Shorts</option>
+            <option value="shoes">Shoes</option>
+            <option value="jacket">Jacket</option>
+            <option value="jersey">Jersey</option>
+            <option value="other">Other</option>
+         </select>
+
+         <br>
+
+         <label for="sortMode">Sort:</label>
+         <select id="sortMode">
+            <option value="relevancy">Relevancy</option>
+            <option value="hightolow">Price: (High - Low)</option>
+            <option value="lowtohigh">Price: (Low - High)</option>
+            <option value="titleaz">Title: A - Z</option>
+            <option value="titleza">Title: Z - A</option>
+            <option value="popularity">Popularity</option>
+         </select>
+      
+         <br>
+
+         <input id="clearButton" value="Clear Filter" type="button">
+      </div>
+
+      <!-- Lun Dev Code (8 March 2023) Add To Cart Shopping using HTML CSS and Javascript [video], Lun Dev Code, YouTube, accessed 7 September 2023. https://www.youtube.com/watch?v=bCTd1eRX7Iw -->
+      <div class="list">
+         <h2 id="no-results">No Results</h2>
+      </div>
+         
+   </section>
+
+   <footer>
+      <!-- Logo Maker (n.d.), Adobe Express, accessed 7 September 2023. https://express.adobe.com/express-apps/logo-maker/ -->
+      <img src="images/website-logo-black.png" alt="Website Logo">
+
+      <ul id="socialmedialist">
+         <li>
+            <!-- File:Instagram logo 2016.svg (3 April 2021) [photograph], Wikimedia Commons, accessed 30 August 2023. https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg -->
+            <a href="https://www.instagram.com"><img src = "images/instagram-logo.png" alt="Instagram Logo"></a>
+         </li>
+         <li>
+            <!-- THE NEW FACEBOOK LOGO PNG 2023 (12 August 2023) [photograph], eDigital, accessed 30 August 2023. https://www.edigitalagency.com.au/logos/new-facebook-logo-png/ -->
+            <a href="https://twitter.com"><img src = "images/twitter-logo.png" alt="Twitter Logo"></a>
+         </li>
+         <li>
+            <!-- X logo (n.d.) [photograph], Twitter, accessed 30 August 2023. https://about.twitter.com/en/who-we-are/brand-toolkit -->
+            <a href="https://www.facebook.com"><img src = "images/facebook-logo.png" alt="Facebook Logo"></a>
+         </li>
+      </ul>
+
+      <p><a href="tel:+0407000000">P: 0407 000 000</a></p>
+
+      <p><a href="mailto:SoccerFusion@gmail.com">E: SoccerFusion@gmail.com</a></p>
+      
+      <p id="copyright"> Copyright © 2023 - SoccerFusion Team - All rights reserved</p>
+
+   </footer>
+
+   <!-- Lun Dev Code (8 March 2023) Add To Cart Shopping using HTML CSS and Javascript [video], Lun Dev Code, YouTube, accessed 7 September 2023. https://www.youtube.com/watch?v=bCTd1eRX7Iw -->
+   <div class="card">
+      <h1>Cart</h1>
+      <ul class="listCard">
+      </ul>
+      <div class="checkOut">
+          <a href="Error404NotFound.html"><div class="total">0</div></a>
+          <div class="closeShopping">Close</div>
+      </div>
+  </div>
+
+   <script src="js/shoppage.js"></script>
+
+   <script>
+      var navLinks = document.getElementById("nav-links");
+
+      function showMenu() {
+         navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+         navLinks.style.right = "-400px";
+      }
+
+
+   </script>
+</body>
+</html>

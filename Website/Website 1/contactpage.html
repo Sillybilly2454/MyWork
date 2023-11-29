@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SoccerFusion Team</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+   <header id="small-header">
+      <!-- Logo Maker (n.d.), Adobe Express, accessed 7 September 2023. https://express.adobe.com/express-apps/logo-maker/ -->
+      <img src="images/website-logo-white.png" alt="Website Logo">
+
+      <nav id="nav-links">
+
+         <!-- X mark Computer Icons Check mark, x mark, angle, logo png (n.d.) [photograph], PNG EGG, accessed 4 September 2023. https://www.pngegg.com/en/png-mrezk -->
+         <button id="exit-selections" onclick="hideMenu()"><img src="images/x.png"></button>
+         
+         <ul>
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+            <li>
+               <a href="informationpage.html">Information</a>
+            </li>
+            <li>
+               <a href="eventspage.html">Events</a>
+            </li>
+            <li id="current-page">
+               <a href="contactpage.html">Contact</a>
+            </li>
+            <li>
+               <a href="gallerypage.html">Gallery</a>
+            </li>
+            <li>
+               <a href="shoppage.html">Shop</a>
+            </li>
+         </ul>
+      </nav>
+
+      <!-- Menu Three Horizontal Lines Symbol Free Icon - Logos With Horizontal Lines (n.d.) [photograph], ClipArtMax, accessed 6 September 2023. https://www.clipartmax.com/middle/m2H7G6N4m2d3b1A0_menu-three-horizontal-lines-symbol-free-icon-logos-with-horizontal-lines/ -->
+      <button id="show-nav-button" onclick="showMenu()"><img src="images/show-nav-button.png"></button>
+   </header>
+
+   <section>
+
+      <!-- GreatStack (6 May 2020) How To Make A Contact Us Page Using HTML And CSS In 10 Minutes [video], GreatStack, YouTube, accessed 12 September 2023. https://www.youtube.com/watch?v=orBQesFBkXg -->
+      <div class="container">
+         <div class="content">
+            <div class="left-side">
+               <div class="details">
+                  <div class="topic">Phone</div>
+                  <div class="text-one">0407 000 000</div>
+               </div>
+               <div class="details">
+                  <div class="topic">Email</div>
+                  <div class="text-one">SoccerFusion@gmail.com</div>
+               </div>
+            </div>
+            <div class="right-side">
+               <div class="topic-text">Send us a message</div>
+               <p>If you want to join the team or have any questions shoot us a message and we'll contact you as quickly as possible</p>
+
+               <div class="input-box">
+                  <input type="text" placeholder="Enter your name" />
+               </div>
+               <div class="input-box">
+                  <input type="text" placeholder="Enter your email" />
+               </div>
+               <div class="input-box message-box">
+                  <textarea placeholder="Enter your message"></textarea>
+               </div>
+               <div class="button">
+                  <input type="button" value="Send" />
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+
+   <footer>
+      <!-- Logo Maker (n.d.), Adobe Express, accessed 7 September 2023. https://express.adobe.com/express-apps/logo-maker/ -->
+      <img src="images/website-logo-black.png" alt="Website Logo">
+
+      <ul id="socialmedialist">
+         <li>
+            <!-- File:Instagram logo 2016.svg (3 April 2021) [photograph], Wikimedia Commons, accessed 30 August 2023. https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg -->
+            <a href="https://www.instagram.com"><img src = "images/instagram-logo.png" alt="Instagram Logo"></a>
+         </li>
+         <li>
+            <!-- THE NEW FACEBOOK LOGO PNG 2023 (12 August 2023) [photograph], eDigital, accessed 30 August 2023. https://www.edigitalagency.com.au/logos/new-facebook-logo-png/ -->
+            <a href="https://twitter.com"><img src = "images/twitter-logo.png" alt="Twitter Logo"></a>
+         </li>
+         <li>
+            <!-- X logo (n.d.) [photograph], Twitter, accessed 30 August 2023. https://about.twitter.com/en/who-we-are/brand-toolkit -->
+            <a href="https://www.facebook.com"><img src = "images/facebook-logo.png" alt="Facebook Logo"></a>
+         </li>
+      </ul>
+
+      <p><a href="tel:+0407000000">P: 0407 000 000</a></p>
+
+      <p><a href="mailto:SoccerFusion@gmail.com">E: SoccerFusion@gmail.com</a></p>
+      
+      <p id="copyright"> Copyright © 2023 - SoccerFusion Team - All rights reserved</p>
+
+   </footer>
+
+   <script>
+      var navLinks = document.getElementById("nav-links");
+
+      function showMenu() {
+         navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+         navLinks.style.right = "-400px";
+      }
+
+
+   </script>
+</body>
+</html>

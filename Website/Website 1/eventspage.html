@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - SoccerFusion Team</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+   <header id="small-header">
+      <!-- Logo Maker (n.d.), Adobe Express, accessed 7 September 2023. https://express.adobe.com/express-apps/logo-maker/ -->
+      <img src="images/website-logo-white.png" alt="Website Logo">
+
+      <nav id="nav-links">
+
+         <!-- X mark Computer Icons Check mark, x mark, angle, logo png (n.d.) [photograph], PNG EGG, accessed 4 September 2023. https://www.pngegg.com/en/png-mrezk -->
+         <button id="exit-selections" onclick="hideMenu()"><img src="images/x.png"></button>
+
+         <ul>
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+            <li>
+               <a href="informationpage.html">Information</a>
+            </li>
+            <li id="current-page">
+               <a href="eventspage.html">Events</a>
+            </li>
+            <li>
+               <a href="contactpage.html">Contact</a>
+            </li>
+            <li>
+               <a href="gallerypage.html">Gallery</a>
+            </li>
+            <li>
+               <a href="shoppage.html">Shop</a>
+            </li>
+         </ul>
+      </nav>
+
+      <!-- Menu Three Horizontal Lines Symbol Free Icon - Logos With Horizontal Lines (n.d.) [photograph], ClipArtMax, accessed 6 September 2023. https://www.clipartmax.com/middle/m2H7G6N4m2d3b1A0_menu-three-horizontal-lines-symbol-free-icon-logos-with-horizontal-lines/ -->
+      <button id="show-nav-button" onclick="showMenu()"><img src="images/show-nav-button.png"></button>
+   </header>
+
+   <section>
+      <h1>Events</h1>
+      <div id="search-container">
+         <input type="text" id="searchBar" placeholder="Search for events...">
+
+         <!-- Computer Icons, filter, angle, rectangle png (n.d.) [photograph], PNG EGG, accessed 8 September 2023. https://www.pngegg.com/en/png-zhnbd -->
+         <button id="filters-button"><img src="images/filters-logo.png"></button>
+      </div>
+
+      <div>
+         <div id="filter-Controls">
+            <label for="selectFilterMonth">Filter by Month:</label>
+            <select id="selectFilterMonth">
+               <option value="-">All</option>
+               <option value="Jan">January</option>
+               <option value="Feb">February</option>
+               <option value="Mar">March</option>
+               <option value="Apr">April</option>
+               <option value="May">May</option>
+               <option value="Jun">June</option>
+               <option value="Jul">July</option>
+               <option value="Aug">August</option>
+               <option value="Sep">September</option>
+               <option value="Oct">October</option>
+               <option value="Nov">November</option>
+               <option value="Dec">December</option>
+            </select>
+
+            <br>
+
+            <label for="selectFilterYear">Filter by Year:</label>
+            <select id="selectFilterYear">
+               <option value="-">All</option>
+               <option value="2020">2020</option>
+               <option value="2021">2021</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+            </select>
+            <br>
+
+            <label for="sortMode">Sort:</label>
+            <select id="sortMode">
+               <option value="relevancy">Relevancy</option>
+               <option value="oldtonew">Oldest - Newest</option>
+               <option value="newtoold">Newest - Oldest</option>
+            </select>
+
+            <br>
+
+            <input id="clearButton" value="Clear Filter" type="button">
+            <br>
+         </div>
+
+         <div id="events">
+            <h2 id="no-results">No Results</h2>
+
+            <!-- ChatGPT (3.5) (I'm making a website for a soccer team called "SoccerFusion Team" and need some content to fill it with. Can you make 10 events, with a heading, date, and event info.  And make the dates for the events between 2020 and 2024. so I can have some past and future events), Mason Gourlay, accessed on (13 September 2023) <https://chat.openai.com/> -->
+
+            <article class="event" id="2020-Jun-15">
+               <a href="Error404NotFound.html"><h4>Season Kickoff Tournament</h4></a>
+
+               <!-- Isitsharp (2014) Young Footballers Celebrating stock photo [photograph], iStock, accessed 13 September 2023. https://www.istockphoto.com/photo/young-footballers-celebrating-gm481645145-37551678 -->
+               <img src="images/News/1.jpg" alt="photo">
+               <p id="date">June 15, 2020</p>
+               <p>Join us for an exciting tournament to kick off the 2020 season. Teams from across the region will compete for glory. Food, music, and fun for the whole family! </p>
+           </article>
+           
+           <article class="event" id="2020-Aug-10">
+               <a href="Error404NotFound.html"><h4>Youth Soccer Clinic</h4></a>
+
+               <!-- Kids playing soccer (4 June 2023) [photograph], SoccerFeed, accessed 13 September 2023. https://soccerfeed.net/the-real-reason-why-soccer-is-better-than-football-for-kids/ -->
+               <img src="images/News/2.jpg" alt="photo">
+               <p id="date">August 10, 2020</p>
+               <p>Our coaches will be hosting a youth soccer clinic to teach kids the basics of the game. A great opportunity for young talents to learn and have fun!</p>
+           </article>
+           
+           <article class="event" id="2020-Nov-20">
+               <a href="Error404NotFound.html"><h4>Charity Fundraising Match</h4></a>
+
+               <!-- FUNDRAISING IDEAS FOR SPORTS TEAMS (12 November 2020) [photograph], Chipotle Fundrasing, accessed 13 September 2023. https://community.chipotle.com/resources/fundraising-ideas/fundraising-ideas-for-sports-teams/ -->
+               <img src="images/News/3.jpg" alt="photo">
+               <p id="date">November 20, 2020</p>
+               <p>We're teaming up with local charities for a friendly match to raise funds for a good cause. Come support the community and enjoy some soccer action.</p>
+           </article>
+           
+           <article class="event" id="2021-Feb-05">
+               <a href="Error404NotFound.html"><h4>Annual Awards Banquet</h4></a>
+
+               <!-- Isitsharp (2014) Young Footballers Celebrating stock photo [photograph], iStock, accessed 13 September 2023. https://www.istockphoto.com/photo/young-footballers-celebrating-gm481645145-37551678 -->
+               <img src="images/News/1.jpg" alt="photo">
+               <p id="date">February 5, 2021</p>
+               <p>Celebrate our 2020 achievements at our Annual Awards Banquet. Join us for a night of recognition, delicious food, and dancing.</p>
+           </article>
+           
+           <article class="event" id="2022-Jul-24">
+               <a href="Error404NotFound.html"><h4>SoccerFusion Cup 2022</h4></a>
+
+               <!-- Kids playing soccer (4 June 2023) [photograph], SoccerFeed, accessed 13 September 2023. https://soccerfeed.net/the-real-reason-why-soccer-is-better-than-football-for-kids/ -->
+               <img src="images/News/2.jpg" alt="photo">
+               <p id="date">July 24, 2022</p>
+               <p>The biggest tournament of the year is here! Top teams from around the nation will compete for the coveted SoccerFusion Cup. Don't miss this epic showdown!</p>
+           </article>
+           
+           <article class="event" id="2022-Aug-14">
+               <a href="Error404NotFound.html"><h4>SoccerFusion Youth Camp</h4></a>
+
+               <!-- FUNDRAISING IDEAS FOR SPORTS TEAMS (12 November 2020) [photograph], Chipotle Fundrasing, accessed 13 September 2023. https://community.chipotle.com/resources/fundraising-ideas/fundraising-ideas-for-sports-teams/ -->
+               <img src="images/News/3.jpg" alt="photo">
+               <p id="date">August 14-16, 2022</p>
+               <p>Our annual youth camp is back! Three days of intensive training, skill development, and lots of fun for aspiring soccer stars.</p>
+           </article>
+           
+           <article class="event" id="2023-Apr-22">
+               <a href="Error404NotFound.html"><h4>Community Cleanup and Soccer Day</h4></a>
+
+               <!-- Isitsharp (2014) Young Footballers Celebrating stock photo [photograph], iStock, accessed 13 September 2023. https://www.istockphoto.com/photo/young-footballers-celebrating-gm481645145-37551678 -->
+               <img src="images/News/1.jpg" alt="photo">
+               <p id="date">April 22, 2023</p>
+               <p>Join us in giving back to the community. We'll start the day with a cleanup, followed by friendly soccer matches for all ages.</p>
+           </article>
+           
+           <article class="event" id="2023-Sep-30">
+               <a href="Error404NotFound.html"><h4>SoccerFusion vs. Rivals Match</h4></a>
+
+               <!-- Kids playing soccer (4 June 2023) [photograph], SoccerFeed, accessed 13 September 2023. https://soccerfeed.net/the-real-reason-why-soccer-is-better-than-football-for-kids/ -->
+               <img src="images/News/2.jpg" alt="photo">
+               <p id="date">September 30, 2023</p>
+               <p>The rivalry continues as we face off against our long-time rivals. Expect a thrilling match filled with intensity and passion.</p>
+           </article>
+           
+           <article class="event" id="2024-Feb-10">
+               <a href="Error404NotFound.html"><h4>SoccerFusion Gala 2024</h4></a>
+
+               <!-- FUNDRAISING IDEAS FOR SPORTS TEAMS (12 November 2020) [photograph], Chipotle Fundrasing, accessed 13 September 2023. https://community.chipotle.com/resources/fundraising-ideas/fundraising-ideas-for-sports-teams/ -->
+               <img src="images/News/3.jpg" alt="photo">
+               <p id="date">February 10, 2024</p>
+               <p>Get ready for an unforgettable night at the SoccerFusion Gala. Dress up, dine, and dance as we celebrate another incredible year of soccer.</p>
+           </article>
+           
+           <article class="event" id="2024-Jun-08">
+               <a href="Error404NotFound.html"><h4>Youth Talent Showcase</h4></a>
+
+               <!-- Isitsharp (2014) Young Footballers Celebrating stock photo [photograph], iStock, accessed 13 September 2023. https://www.istockphoto.com/photo/young-footballers-celebrating-gm481645145-37551678 -->
+               <img src="images/News/1.jpg" alt="photo">
+               <p id="date">June 8, 2024</p>
+               <p>Witness the future stars of soccer at our Youth Talent Showcase. Young players will demonstrate their skills in front of scouts and fans alike.</p>
+           </article>
+           
+         </div>
+      </div>
+   </section>
+
+   <div id="eventNotificationSignup">
+      <h2>Sign up to get notifications for upcoming events</h2>
+      <div class="input-box">
+         <input type="text" placeholder="Enter your email" />
+      </div>
+
+      <div class="button">
+         <input type="button" value="Subscribe" />
+      </div>
+   </div>
+   
+
+   <footer id="noMarginFoot">
+      <!-- Logo Maker (n.d.), Adobe Express, accessed 7 September 2023. https://express.adobe.com/express-apps/logo-maker/ -->
+      <img src="images/website-logo-black.png" alt="Website Logo">
+
+      <ul id="socialmedialist">
+         <li>
+            <!-- File:Instagram logo 2016.svg (3 April 2021) [photograph], Wikimedia Commons, accessed 30 August 2023. https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg -->
+            <a href="https://www.instagram.com"><img src = "images/instagram-logo.png" alt="Instagram Logo"></a>
+         </li>
+         <li>
+            <!-- THE NEW FACEBOOK LOGO PNG 2023 (12 August 2023) [photograph], eDigital, accessed 30 August 2023. https://www.edigitalagency.com.au/logos/new-facebook-logo-png/ -->
+            <a href="https://twitter.com"><img src = "images/twitter-logo.png" alt="Twitter Logo"></a>
+         </li>
+         <li>
+            <!-- X logo (n.d.) [photograph], Twitter, accessed 30 August 2023. https://about.twitter.com/en/who-we-are/brand-toolkit -->
+            <a href="https://www.facebook.com"><img src = "images/facebook-logo.png" alt="Facebook Logo"></a>
+         </li>
+      </ul>
+
+      <p><a href="tel:+0407000000">P: 0407 000 000</a></p>
+
+      <p><a href="mailto:SoccerFusion@gmail.com">E: SoccerFusion@gmail.com</a></p>
+      
+      <p id="copyright"> Copyright © 2023 - SoccerFusion Team - All rights reserved</p>
+
+   </footer>
+
+   <script src="js/eventspage.js"></script>
+
+   <script>
+      var navLinks = document.getElementById("nav-links");
+
+      function showMenu() {
+         navLinks.style.right = "0";
+      }
+
+      function hideMenu() {
+         navLinks.style.right = "-400px";
+      }
+      
+   </script>
+</body>
+</html>
