@@ -1,0 +1,18 @@
+{
+  "name": "Sign in/out Portal",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^31.3.1"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^12.0.0",
+    "axios": "^1.7.3",
+    "mysql2": "^3.11.0",
+    "serialport": "^10.4.0",
+    "webcam-easy": "^1.1.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}

@@ -1,0 +1,1 @@
+This folder 'Electron Appliction' dosent need to be in the overall 'IT-Major-Project' folder and should be placed on the kiosks machines while the 'IT-Major-Project' folder will be kept on the server.

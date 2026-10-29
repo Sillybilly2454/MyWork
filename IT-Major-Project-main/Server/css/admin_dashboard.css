@@ -1,0 +1,254 @@
+/* #region General Styles */
+/* General page styling */
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+img {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 30px;
+}
+/* #endregion */
+
+/* #region Dashboard Layout */
+/* Styling for the main dashboard container */
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+.dashboard-container h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    color: #002341;
+    margin-bottom: 20px;
+}
+/* #endregion */
+
+/* #region Tabs and Section Display */
+/* Tabs container styling */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.tab-button {
+    padding: 10px 20px;
+    background-color: #0096ba;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.tab-button:hover {
+    background-color: #0075da;
+}
+.data-section {
+    display: none;
+    margin-bottom: 20px;
+}
+.data-section.active {
+    display: block;
+}
+/* #endregion */
+
+/* #region Table Styling */
+/* Basic styling for tables and table headers */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+    color: #002341;
+}
+.period-header {
+    background-color: #f4b400;
+    font-weight: bold;
+}
+table tr:hover {
+    background-color: #f2f6fa; /* Highlight table row on hover */
+}
+/* #endregion */
+
+/* #region Button Styling */
+/* General styling for buttons */
+.btn {
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    height: 40px;
+    padding: 0 15px;
+    line-height: 40px; 
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-add, .btn-refresh, .btn-scanRFID { background-color: #8ed4e7; }
+.btn-edit, .btn-custom { background-color: #ffc107; }
+.btn-delete, .btn-closeAppButton { background-color: #dc3545; }
+.btn-logout { background-color: #6c757d; }
+.btn-reset, .btn-changeActivity, .btn-timetable, .manage-classes-button { background-color: #17a2b8; }
+/* Close Application Button */
+button#closeAppButton {
+    background-color: #ff9500;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    width: auto;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+button#closeAppButton:hover { background-color: #e68900; }
+button#closeAppButton[disabled] {
+    background-color: #dfeef5;
+    color: #0096ba;
+    cursor: not-allowed;
+}
+/* #endregion */
+
+/* #region Form Elements */
+/* General styling for form input fields */
+.form-row input, .form-row select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* #endregion */
+
+/* #region Modal Content */
+/* Modal styling for password and other popups */
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+#changePassword-modal .modal-content { max-width: 400px; }
+/* #endregion */
+
+/* #region Popup and Overlay Styles */
+/* Overlay and popup styling */
+#popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    width: auto;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.popup-buttons { margin-top: 15px; }
+.popup-buttons button { margin: 0 5px; }
+/* #endregion */
+
+/* #region Search Results Styling */
+/* Styling for search result items */
+.search-results div {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    cursor: pointer;
+}
+.search-results div:hover {
+    background-color: #e9ecef;
+}
+/* #endregion */
+
+/* #region Message Display */
+/* Error and informational message styling */
+.message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+/* #endregion */
+
+/* #region Timetable Modal */
+/* Styling specific to the timetable modal */
+#timetable-modal {
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+#timetable-container th {
+    background-color: #079;
+    color: white;
+}
+#timetable-container .period-header {
+    background-color: #f4b400;
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region Filter and Search Box Styling */
+/* Styling for search and filter boxes */
+#students-search, #students-filter,
+#classes-search, #classes-filter,
+#users-search, #users-filter,
+#attendance-search, #attendance-filter {
+    max-width: 300px;
+    width: 100%;
+    height: 40px;
+    line-height: 1;
+    padding: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.search { margin-bottom: 5px; }
+/* #endregion */
+
+/* Close button specific styling */
+.close {
+    margin: 25px;
+    margin-left: -50px;
+    font-size: 50px;
+}

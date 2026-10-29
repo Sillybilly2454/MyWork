@@ -1,0 +1,152 @@
+/* #region Global Styles */
+/* General styling for the body and image elements */
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #f2f6fa;
+    color: #002341;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+img {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 30px;
+    padding-top: 40px;
+}
+/* #endregion */
+
+/* #region Dashboard Container */
+/* Styling for the main dashboard container */
+.dashboard-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dfeef5;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+h2 {
+    color: #005494;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+/* #endregion */
+
+/* #region Button Styles */
+/* General styling for button elements */
+.btn {
+    background-color: #079;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #005494;
+}
+.btn.logout-btn { background-color: #ff9500; }
+.btn.timetable-btn, .btn.rfid-btn {
+    width: auto;
+    margin: 15px 5px;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #17a2b8;
+    color: white;
+}
+.btn.timetable-btn:hover, .btn.rfid-btn:hover { background-color: #138496; }
+.btn.rfid-btn { background-color: #007bff; }
+/* #endregion */
+
+/* #region Clock Styling */
+/* Styling for digital and analog clock containers */
+#clock-container { margin-top: 20px; }
+#digital-clock {
+    font-size: 20px;
+    color: #005494;
+}
+#analog-clock {
+    border: 2px solid #005494;
+    border-radius: 50%;
+}
+/* #endregion */
+
+/* #region Popup Styling */
+/* General styling for popups */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dfeef5;
+    width: 300px;
+    text-align: left;
+    border-radius: 5px;
+
+    /* Centering the popup content */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.popup-content h3 {
+    color: #005494;
+    margin-bottom: 10px;
+}
+.close-popup {
+    background-color: #ff9500;
+    color: white;
+    padding: 3px;
+}
+/* #endregion */
+
+/* #region Timetable Popup */
+/* Styling specific to the timetable popup */
+#timetablePopup .popup-content {
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+#timetable-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+#timetable-container th, #timetable-container td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+#timetable-container th {
+    background-color: #079;
+    color: white;
+}
+#timetable-container .period-header {
+    background-color: #f4b400;
+    font-weight: bold;
+}
+/* #endregion */
+
+/* #region Miscellaneous */
+/* Styling for close button */
+.close {
+    margin: 25px;
+    font-size: 50px;
+}
+/* #endregion */
